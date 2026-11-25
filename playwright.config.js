@@ -1,0 +1,19 @@
+// @ts-check
+import { defineConfig, devices } from '@playwright/test';
+
+export default defineConfig({
+  testDir: './tests',
+  timeout: 10 * 1000,
+  expect:{timeout: 10*1000}, //This the "Global Level Timeout" for all expect assertions in the test. If you want to override this timeout for a specific step, you can pass a timeout value in milliseconds as an option to the expect assertion.
+  use:
+  {
+    //Chrome = "chromium"
+    //Safari = "webkit"
+    //Firefox = "firefox"
+    browserName: "chromium",
+    headless: true,
+    trace: 'retain-on-failure', //Generates trace logs. "on" generates trace logs regardless of Pass or Fail. "retain-on-failure" generates trace logs only on test Fail
+    screenshot: "on", //Captures screenshot for every step
+  },
+
+});

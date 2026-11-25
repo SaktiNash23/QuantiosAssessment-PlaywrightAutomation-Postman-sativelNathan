@@ -1,0 +1,159 @@
+{
+  "info": {
+    "_postman_id": "7826b240-ad71-49b2-8547-0819d8d2c0ba",
+    "name": "QuantiosAssessment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60353651",
+    "_collection_link": "https://go.postman.co/collection/60353651-7826b240-ad71-49b2-8547-0819d8d2c0ba?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POST watchlist",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"sativelNathan\",\r\n  \"symbol\": \"NVDA\",\r\n  \"name\": \"NVIDIA Corporation.\",\r\n  \"price\": 198.7,\r\n  \"change\": 1.2,\r\n  \"change_percent\": 1.2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_post",
+          "protocol": "https",
+          "host": [
+            "qainterview",
+            "netlify",
+            "app"
+          ],
+          "path": [
+            ".netlify",
+            "functions",
+            "watchlist_post"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "201 Accepted",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"sativelNathan\",\r\n  \"symbol\": \"NVDA\",\r\n  \"name\": \"NVIDIA Corporation.\",\r\n  \"price\": 198.7,\r\n  \"change\": 1.2,\r\n  \"change_percent\": 1.2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_post",
+              "protocol": "https",
+              "host": [
+                "qainterview",
+                "netlify",
+                "app"
+              ],
+              "path": [
+                ".netlify",
+                "functions",
+                "watchlist_post"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "text",
+          "header": null,
+          "cookie": [],
+          "body": "{\"message\":\"Added to watchlist.\"}"
+        }
+      ]
+    },
+    {
+      "name": "GET watchlist",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=sativelNathan",
+          "protocol": "https",
+          "host": [
+            "qainterview",
+            "netlify",
+            "app"
+          ],
+          "path": [
+            ".netlify",
+            "functions",
+            "watchlist_get"
+          ],
+          "query": [
+            {
+              "key": "username",
+              "value": "sativelNathan"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "200 OK",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_get?username={{username}}",
+              "protocol": "https",
+              "host": [
+                "qainterview",
+                "netlify",
+                "app"
+              ],
+              "path": [
+                ".netlify",
+                "functions",
+                "watchlist_get"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "{{username}}"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": null,
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    }
+  ]
+}
