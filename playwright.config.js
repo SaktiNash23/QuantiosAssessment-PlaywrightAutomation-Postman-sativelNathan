@@ -11,7 +11,7 @@ export default defineConfig({
     //Safari = "webkit"
     //Firefox = "firefox"
     browserName: "chromium",
-    headless: true,
+    headless: false,
     trace: 'retain-on-failure', //Generates trace logs. "on" generates trace logs regardless of Pass or Fail. "retain-on-failure" generates trace logs only on test Fail
     screenshot: "on", //Captures screenshot for every step
   },
